@@ -1,0 +1,460 @@
+
+
+
+
+<!--
+Project Name: Profile page for internSystem
+Company Name: Intern Systems
+Company CEO Name: Joe Stephens
+My Name: Muhammad Hamza Kardar
+Date Last modifed: 11/15/2018
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+     	overflow: hidden;
+}
+
+table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+}
+
+td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+    	font-weight: normal;
+}
+
+h2 {
+    	font-weight: 550;
+    	font-size: 16pt; 
+}
+
+label {
+    	font-family: arial, sans-serif;
+    	font-size: 12pt; 
+}
+
+
+input {
+    	font-family: arial, sans-serif;
+    	font-size: 12pt; 
+}
+
+
+.InnerPanel {
+	overflow-y: scroll;
+	top: 75px;
+	bottom: 2px;
+        left: 5px;
+        right: 2px;
+        position: fixed;
+   }
+
+.HeaderLabel {
+	border: 1px solid darkblue; 
+	font-size: 20pt; 
+	width: 100%; 
+	height: 42px; 
+        z-index: 1;
+        top: 0px; 
+        left: 0px;
+        right: 15px;
+        padding-left: 15px;
+        padding-top: 15px;
+	background-color: lightgray;
+    	font-weight: bold;
+   }
+
+.columnHeader {
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+table, td{    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;}
+	tr{transition:all .25s ease-in-out}
+	tr:hover{background-color:#EEE; cursor:pointer}
+	
+</style>
+	
+
+
+<title>Profile</title> 
+</head>
+
+<body id="outerWindow" >
+<div name="newProfile" id="save" >
+	<div style="margin-right:15px;">
+		<div class="HeaderLabel">Profile<label style="float:right;">&nbsp&nbsp&nbsp&nbsp</label>
+			<!-- input id="Save" style="float:right;" name="SubmitProfile" type="submit" value="Save Profile"  -->
+			<button type="button" style="float:right;"  onclick="saveDataOnScreen()">Save</button>
+		</div>
+	</div>
+<br>
+
+<div id="InnerPanel" class="InnerPanel">
+	<div id="file-content"></div>
+	<img style="margin-left:25px" id="photo" src="http://www.internsystems-beta.com/test1/avatar.jpg" width="200" height="200" />
+	<input type="file" name="image" id="photo_filename" accept="image/x-png,image/gif,image/jpeg">
+	<button onclick="displayImage()">Display Image</button>
+<fieldset>
+<h2><color>Personal Information</color></h2>
+
+<label for="First Name">First Name</label>
+<input class="formdata" type="text" id="" name="first_name">
+
+
+<label for="Last Name"> Last Name</label>
+<input class="formdata" type="text" name="last_name">
+
+
+<label for="Middle Name"> Middle Name</label>
+<input class="formdata" type="text" name="middle_name" >
+</p>
+<p>
+
+
+<label for="Street Address">Street Address</label>
+<input class="formdata" type="text" name="address" style="width: 500px;auto">
+</p>
+<p>
+<label for="City">City</label>
+<input class="formdata" type="text" name="city" style="Width: 200px;auto">
+
+<label for="State">State</label>
+<input class="formdata" type="text" name="state" >
+
+<label for="Zip Code">Zip Code</label>
+<input class="formdata" type="text" name="zip_code" >
+
+</p>
+<p>
+<label for="Date of Bitrh">Date of Birth</label>
+<input class="formdata" type="Date" name="DOB" >
+
+<label for="Phone Number">Phone Number</label>
+<input class="formdata" type="text" name="phone_number" >
+
+<label for="Gender">Gender</label>
+<SELECT class="formdata" name="gender">
+
+<OPTION Value=" "> </OPTION>
+<OPTION Value="Male">Male</OPTION>
+<OPTION Value="Female">Female</OPTION>
+<OPTION Value="Other">Other</OPTION>
+<OPTION Value="Preffered not to say">Preffered not to say</OPTION>
+
+</SELECT>
+</p>
+<p>
+<label for="Email Address">Email Address</label>
+<input type="Email" name="email"  style="width: 300px;auto;background-color: LightGrey;" readonly>
+</p>
+
+</fieldset>
+
+
+<fieldset>
+<h2><color>School Information</color></h2>
+
+<p>
+<label for="School Name">School Name</label>
+<input class="formdata" type="text" name="school_name" style="width: 500px;auto">
+</p>
+<p>
+<label for="School ID">School ID</label>
+<input class="formdata" type="text" name="school_id" style="width: 125px;auto">
+</p>
+
+<p>
+<label for="Major">Major</label>
+<input class="formdata" type="text" name="major" >
+
+<label for="GPA">GPA</label>
+<input class="formdata" type="text" name="gpa" >
+</p>
+<p>
+<label for="Grdauation Date">Grdauation Date</label>
+<input class="formdata" type="Date" name="grad_date" >
+</p>
+</fieldset>
+<fieldset>
+<h2><color>Work Experience</color></h2>
+
+
+<table id="myJobTable">
+  <tr>
+	<th class="columnHeader">Job Title</th>
+	<th class="columnHeader">Job Discription (Optional) </th>
+	<th class="columnHeader">Start Date</th>
+	<th class="columnHeader">End Date</th>
+  </tr>
+  <tr>
+    <td><input type="text" name="Job Title" id="jobTitle"></td>
+    <td><input type="text" name="Job Discription"  id= "jobDiscription" style="width: 350px;auto"></td>
+    <td><input type="Date" name="Start Date" id="startDate"></td>
+	<td><input type="Date" name="End Date" id= "endDate"></td>
+  </tr>
+
+<!--WorkExperience-->
+</table>
+
+<button onclick="JobAddFunction()">Add Job</button>
+<button onclick="jobDeleteFunction()" id="del">Delete Job</button>
+<button onclick="jobEditFunction()">Edit Job</button>
+<script>
+
+ var indexRow;
+ var table=document.getElementById("myJobTable");
+ 
+
+function JobAddFunction() {
+ var table=document.getElementById("myJobTable");
+     
+	//if(!checkEmptyForJob()){
+	var row = table.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+	var cell3= row.insertCell(2);
+	var cell4= row.insertCell(3);
+
+ var jTitle=document.getElementById("jobTitle").value,
+	 jDiscription=document.getElementById("jobDiscription").value,
+	 JSDate=document.getElementById("startDate").value,
+	 JEDate=document.getElementById("endDate").value;
+	 
+ 
+ 
+ cell1.innerHTML = jTitle;
+    cell2.innerHTML = jDiscription;
+	 cell3.innerHTML = JSDate;
+    cell4.innerHTML = JEDate;
+
+  document.getElementById("jobTitle").value= "";
+    document.getElementById("jobDiscription").value= "";
+	 document.getElementById("startDate").value= "";
+    document.getElementById("endDate").value= "";
+	
+ 
+	
+selectRowForJob();
+	//}
+}
+function selectRowForJob() {
+ 
+ var table=document.getElementById("myJobTable");
+ 
+ for(var i=2; i<table.rows.length;i++)
+ {
+ table.rows[i].onclick = function()
+ {
+  indexRow=this.rowIndex;
+   document.getElementById("jobTitle").value= this.cells[0].innerHTML;
+    document.getElementById("jobDiscription").value= this.cells[1].innerHTML;
+	 document.getElementById("startDate").value= this.cells[2].innerHTML;
+    document.getElementById("endDate").value= this.cells[3].innerHTML;
+	
+ 
+ 
+ };
+ 
+ }
+
+
+
+}
+selectRowForJob();
+
+function jobEditFunction(){
+ var table=document.getElementById("myJobTable");
+ 
+ var jTitle=document.getElementById("jobTitle").value,
+	 jDiscription=document.getElementById("jobDiscription").value,
+	 JSDate=document.getElementById("startDate").value,
+	 JEDate=document.getElementById("endDate").value;
+	 
+ table.rows[indexRow].cells[0].innerHTML = jTitle;
+    table.rows[indexRow].cells[1].innerHTML = jDiscription;
+	 table.rows[indexRow].cells[2].innerHTML = JSDate;
+    table.rows[indexRow].cells[3].innerHTML = JEDate;
+		 
+
+  document.getElementById("jobTitle").value= "";
+    document.getElementById("jobDiscription").value= "";
+	 document.getElementById("startDate").value= "";
+    document.getElementById("endDate").value= "";
+	
+}
+
+function jobDeleteFunction() {
+ var table=document.getElementById("myJobTable");
+  
+ table.deleteRow(indexRow);
+
+ 
+   document.getElementById("jobTitle").value= "";
+    document.getElementById("jobDiscription").value= "";
+	 document.getElementById("startDate").value= "";
+    document.getElementById("endDate").value= "";
+	
+ indexRow=-2;
+ 
+ }
+</script>
+
+</fieldset>
+
+<fieldset>
+<h2><color>Skills</color></h2>
+
+
+
+
+
+<table id="mySkillTable">
+  <tr>
+	<th class="columnHeader">Skill</th>
+    <th class="columnHeader">Skill Evaluation (0-10)</th>
+    <th class="columnHeader">Skill Discription(Optional)</th>
+	</tr>
+  <tr>
+	<td><input type="text" name="Skill" id="Skill"></td>
+ <td><input type="text" name="Skill Evaluation" id="skillEvaluation"></td>   
+   <td><input type="text" name="Job Discription"  id= "skillDiscription" style="width: 450px;auto"></td>
+   
+	
+  </tr>
+
+<!--Skills-->
+</table>
+
+<button onclick="skilladdFunction()">Add Skill</button>
+<button onclick="skllDeleteFunction()">Delete Skill</button>
+<button onclick="skllEditFunction()">Edit Skill</button>
+
+
+<script>
+
+ var indexRowSkill;
+    
+
+
+function skilladdFunction() {
+var table = document.getElementById("mySkillTable");
+
+    var row = table.insertRow();
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+	var cell3= row.insertCell(2),
+	 skillName = document.getElementById("Skill").value,
+     skillrank = document.getElementById("skillEvaluation").value,
+	 describeSkill = document.getElementById("skillDiscription").value;
+   
+
+   
+ cell1.innerHTML = skillName;
+    cell2.innerHTML = skillrank;
+	 cell3.innerHTML = describeSkill;
+   
+  
+
+ document.getElementById("Skill").value= "";
+    document.getElementById("skillEvaluation").value= "";
+	 document.getElementById("skillDiscription").value= "";
+	
+
+  
+ selectRowForSkill();  
+   
+   }
+
+
+ 
+
+function selectRowForSkill() {
+var table = document.getElementById("mySkillTable");
+ 
+
+ for(var i=2; i<table.rows.length;i++)
+ {
+ table.rows[i].onclick = function()
+ {
+  indexRowSkill=this.rowIndex;
+   document.getElementById("Skill").value= this.cells[0].innerHTML;
+    document.getElementById("skillEvaluation").value= this.cells[1].innerHTML;;
+	 document.getElementById("skillDiscription").value= this.cells[2].innerHTML;;
+	
+ 
+ 
+ };
+ 
+ }
+
+
+
+}
+selectRowForSkill();
+
+function skllEditFunction(){
+var table = document.getElementById("mySkillTable");
+
+ var skillName = document.getElementById("Skill").value,
+     skillrank = document.getElementById("skillEvaluation").value,
+	 describeSkill = document.getElementById("skillDiscription").value;
+   
+ table.rows[indexRowSkill].cells[0].innerHTML = skillName;
+    table.rows[indexRowSkill].cells[1].innerHTML = skillrank;
+	 table.rows[indexRowSkill].cells[2].innerHTML = describeSkill;
+    	 
+
+ document.getElementById("Skill").value= "";
+    document.getElementById("skillEvaluation").value= "";
+	 document.getElementById("skillDiscription").value= "";
+	
+		 
+		 
+}
+
+function skllDeleteFunction() {
+var table = document.getElementById("mySkillTable");
+
+
+    table.deleteRow(indexRowSkill);
+
+	 document.getElementById("Skill").value= "";
+    document.getElementById("skillEvaluation").value= "";
+	 document.getElementById("skillDiscription").value= "";
+	
+	indexRowSkill=-2;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</fieldset>
+
+</div>
+</div>
+</body>
+</HTML>

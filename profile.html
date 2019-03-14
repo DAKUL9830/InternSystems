@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Website</title>
+     <link href="profile_style.css" rel="stylesheet">
+		<script language="javascript">
+			
+			function startObservation() {
+  				window.addEventListener("resize", resizeME);
+				
+				resizeME();
+			}
+			
+			function resizeME() {
+				var frameNumber = 1;
+				var done = false;
+				var textId = "";
+				
+				do{
+					textId = "num" + frameNumber;
+					if (document.getElementById(textId).style.display == "block")
+						{
+							done = true;
+						}
+					else
+						{
+							frameNumber++;
+						}
+					if (frameNumber > 4){done = true;}
+				}while(!done);
+				
+				if (frameNumber < 5)
+					{
+						var textIframe	= "frame" + frameNumber;
+						
+		             			var iframeX 	= document.getElementById(textIframe);
+             					var divWrapperX	= document.getElementById(textId);
+						
+						var newheight 	= (divWrapperX.offsetHeight-10) + 'px';
+						var newwidth 	= (divWrapperX.offsetWidth-165) + 'px';
+						
+    						iframeX.style.height 	= newheight;
+		    				iframeX.style.width 	= newwidth;
+					}
+			}
+			
+            		function setAllInvisible() {
+             			var showme = document.getElementById("num1");
+                		showme.style.display = "none";
+				showme = document.getElementById("num2");
+                		showme.style.display = "none";
+				showme = document.getElementById("num3");
+                		showme.style.display = "none";
+				showme = document.getElementById("num4");
+                		showme.style.display = "none";
+ 			}
+			
+  			function newwindow(ele) {
+				var showme = null;
+				var id = ele.id;
+				
+				setAllInvisible();
+				
+				if (id=="click1")
+					{
+						showme = document.getElementById("num1");
+               					showme.style.display = "block";
+						resizeME();
+					}
+				else if(id=="click2")
+					{
+						showme = document.getElementById("num2");
+              	 				showme.style.display = "block";
+						resizeME();
+					}
+				else if(id=="click3")
+					{
+						showme = document.getElementById("num3");
+            	 	  			showme.style.display = "block";
+						resizeME();
+					}
+				else if(id=="click4")
+					{
+						showme = document.getElementById("num4");
+            		   			showme.style.display = "block";
+						resizeME();
+					}
+ 			}
+        </script>
+</head>
+<body style="overflow:hidden;"  onload="startObservation()">
+<header>
+	<div>
+		<img id="photo" src="http://www.internsystems-beta.com/test1/InternSystemsLogo.jpg" style="padding-top:10px;float: left;" width="330px" height="65px" />
+		<!-- div class="header1">InternSystems</div -->
+		<ul> 
+			<li><label style="font-size: 16pt;color:white;"><!--FULLNAME--></label></li>
+			<li>&nbsp&nbsp&nbsp</li>
+			<li><a href="#">Log Out</a></li>
+		</ul>
+	</div>
+ </header>
+<div class="container" id="container">  
+	<div class="sidenav">
+		<a href="#" class="nav" id="click1" onclick="newwindow(this)">Profile</a>
+ 		<a href="#" class="nav" id="click2" onclick="newwindow(this)">Resume</a>
+		<a href="#" class="nav" id="click3" onclick="newwindow(this)">Transcript</a>
+		<a href="#" class="nav" id="click4" onclick="newwindow(this)">Search</a>
+ 	</div>
+   	<div class="RightCol" >
+		<div class="wrapper" id="num1" style="display:block">
+			<iframe class="Frame" id="frame1" src="profile_panel.html">
+			</iframe>
+		</div>
+		<div id="num2" class="wrapper" style="display:none">
+			<iframe class="Frame" id="frame2" src="">
+			</iframe>
+		</div>
+		<div id="num3" class="wrapper" style="display:none">
+			<iframe class="Frame" id="frame3" src="">
+			</iframe>
+		</div>
+		<div id="num4" class="wrapper" style="display:none">
+			<iframe class="Frame" id="frame4" src="">
+			</iframe>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+</body>
+<footer>
+<footer >
+
+	<ul style="padding:10px 10px;">
+  		<li><label>&copy Intern Systems 2019</label></li>  
+  		<li><a href="">User Agreement</a></li>  
+  		<li><a href="">Privacy Policy</a></li>
+   		<li style="float:right"><a href="" >Contact Us</a></li>
+	</ul>
+</footer>
+
+</html>
+
+
