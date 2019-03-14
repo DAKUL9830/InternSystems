@@ -33,7 +33,7 @@ html, body {
    header ul {
         height: 20px;
         margin: 0px;
-    	padding-right: 20px;
+    	padding-right: 0px;
 	}
 	
    header li a {
@@ -59,7 +59,7 @@ html, body {
 	}
    
    header ul {
-    	float: right;
+    	float: center;
     	list-style-type: none;
     	padding-top: 20px;
    	}
@@ -78,7 +78,7 @@ html, body {
    }
 
     .Frame {
-       width: 300px;
+       width: 150px;
        position: fixed;
        z-index: 3;
        top: 70px; 
@@ -88,7 +88,7 @@ html, body {
    }
 
     .wrapper {
-       width: 100%;
+       width: 65%;
        position: fixed;
        z-index: 5;
        top: 65px; 
