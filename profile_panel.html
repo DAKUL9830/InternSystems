@@ -34,18 +34,18 @@ td, th {
 
 h2 {
     	font-weight: 550;
-    	font-size: 16pt; 
+    	font-size: 30pt; 
 }
 
 label {
     	font-family: arial, sans-serif;
-    	font-size: 12pt; 
+    	font-size: 20pt; 
 }
 
 
 input {
     	font-family: arial, sans-serif;
-    	font-size: 12pt; 
+    	font-size: 20pt; 
 }
 
 
@@ -60,7 +60,7 @@ input {
 
 .HeaderLabel {
 	border: 1px solid darkblue; 
-	font-size: 20pt; 
+	font-size: 30pt; 
 	width: 100%; 
 	height: 42px; 
         z-index: 1;
@@ -113,12 +113,12 @@ table, td{    border: 1px solid #dddddd;
 
 <label for="First Name">First Name</label>
 <input class="formdata" type="text" id="" name="first_name">
-
-
+</p>
+<p>
 <label for="Last Name"> Last Name</label>
 <input class="formdata" type="text" name="last_name">
-
-
+</p>
+<p>
 <label for="Middle Name"> Middle Name</label>
 <input class="formdata" type="text" name="middle_name" >
 </p>
@@ -131,10 +131,12 @@ table, td{    border: 1px solid #dddddd;
 <p>
 <label for="City">City</label>
 <input class="formdata" type="text" name="city" style="Width: 200px;auto">
-
+</p>
+<p>
 <label for="State">State</label>
 <input class="formdata" type="text" name="state" >
-
+</p>
+<p>
 <label for="Zip Code">Zip Code</label>
 <input class="formdata" type="text" name="zip_code" >
 
@@ -142,10 +144,12 @@ table, td{    border: 1px solid #dddddd;
 <p>
 <label for="Date of Bitrh">Date of Birth</label>
 <input class="formdata" type="Date" name="DOB" >
-
+</p>
+<p>
 <label for="Phone Number">Phone Number</label>
 <input class="formdata" type="text" name="phone_number" >
-
+</p>
+<p>
 <label for="Gender">Gender</label>
 <SELECT class="formdata" name="gender">
 
@@ -180,7 +184,8 @@ table, td{    border: 1px solid #dddddd;
 <p>
 <label for="Major">Major</label>
 <input class="formdata" type="text" name="major" >
-
+</p>
+<p>
 <label for="GPA">GPA</label>
 <input class="formdata" type="text" name="gpa" >
 </p>
@@ -191,28 +196,45 @@ table, td{    border: 1px solid #dddddd;
 </fieldset>
 <fieldset>
 <h2><color>Work Experience</color></h2>
-
+<button onclick="JobAddFunction()">Add Job</button>
+<button onclick="jobDeleteFunction()" id="del">Delete Job</button>
 
 <table id="myJobTable">
   <tr>
-	<th class="columnHeader">Job Title</th>
-	<th class="columnHeader">Job Discription (Optional) </th>
-	<th class="columnHeader">Start Date</th>
-	<th class="columnHeader">End Date</th>
-  </tr>
-  <tr>
+	<th class="columnHeader">Job Title</th></tr><td><input type="text" name="Job Title" id="jobTitle"></td>
+	<tr>
+	<th class="columnHeader">Job Discription (Optional) </th></tr><td><input type="text" name="Job Discription"  id= "jobDiscription" style="width: 350px;auto"></td>
+	<tr>
+	<th class="columnHeader">Start Date</th></tr><td><input type="Date" name="Start Date" id="startDate"></td>
+	<tr>
+	<th class="columnHeader">End Date</th></tr><td><input type="Date" name="End Date" id= "endDate"></td>
+  <!--</tr>-->
+ <!-- <tr>
     <td><input type="text" name="Job Title" id="jobTitle"></td>
     <td><input type="text" name="Job Discription"  id= "jobDiscription" style="width: 350px;auto"></td>
     <td><input type="Date" name="Start Date" id="startDate"></td>
 	<td><input type="Date" name="End Date" id= "endDate"></td>
-  </tr>
+  </tr>-->
 
 <!--WorkExperience-->
 </table>
 
-<button onclick="JobAddFunction()">Add Job</button>
-<button onclick="jobDeleteFunction()" id="del">Delete Job</button>
-<button onclick="jobEditFunction()">Edit Job</button>
+<!--<button onclick="JobAddFunction()">Add Job</button>
+<button onclick="jobDeleteFunction()" id="del">Delete Job</button>-->
+<!--<button onclick="jobEditFunction()">Edit Job</button>-->
+<!--<p>
+<label for="School Name">School Name</label>
+<input class="formdata" type="text" name="school_name" style="width: 500px;auto">
+</p>
+<p>
+<label for="School ID">School ID</label>
+<input class="formdata" type="text" name="school_id" style="width: 125px;auto">
+</p>
+
+<p>
+<label for="Major">Major</label>
+<input class="formdata" type="text" name="major" >
+</p>-->
 <script>
 
  var indexRow;
@@ -320,28 +342,31 @@ function jobDeleteFunction() {
 
 
 
-
+<button onclick="skilladdFunction()">Add Skill</button>
+<button onclick="skllDeleteFunction()">Delete Skill</button>
 
 <table id="mySkillTable">
   <tr>
-	<th class="columnHeader">Skill</th>
-    <th class="columnHeader">Skill Evaluation (0-10)</th>
-    <th class="columnHeader">Skill Discription(Optional)</th>
+	<th class="columnHeader">Skill</th></tr><td><input type="text" name="Skill" id="Skill"></td>
+	<tr>
+    <th class="columnHeader">Skill Evaluation (0-10)</th></tr><td><input type="text" name="Skill Evaluation" id="skillEvaluation"></td>
+	<tr>
+    <th class="columnHeader">Skill Discription(Optional)</th></tr><td><input type="text" name="Job Discription"  id= "skillDiscription" style="width: 450px;auto"></td>
 	</tr>
-  <tr>
+ <!-- <tr>
 	<td><input type="text" name="Skill" id="Skill"></td>
  <td><input type="text" name="Skill Evaluation" id="skillEvaluation"></td>   
    <td><input type="text" name="Job Discription"  id= "skillDiscription" style="width: 450px;auto"></td>
    
 	
-  </tr>
+  </tr>-->
 
 <!--Skills-->
 </table>
 
-<button onclick="skilladdFunction()">Add Skill</button>
+<!--<button onclick="skilladdFunction()">Add Skill</button>
 <button onclick="skllDeleteFunction()">Delete Skill</button>
-<button onclick="skllEditFunction()">Edit Skill</button>
+<button onclick="skllEditFunction()">Edit Skill</button>-->
 
 
 <script>
