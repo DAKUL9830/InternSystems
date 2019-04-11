@@ -98,7 +98,7 @@ table, td{    border: 1px solid #dddddd;
 	<div style="margin-right:15px;">
 		<div class="HeaderLabel">Profile<label style="float:right;">&nbsp&nbsp&nbsp&nbsp</label>
 			<!-- input id="Save" style="float:right;" name="SubmitProfile" type="submit" value="Save Profile"  -->
-			<button type="button" style="float:right;"  onclick="saveDataOnScreen()">Save</button>
+			<button type="button" style="float:right;height: 40px;width: 100px"   onclick="saveDataOnScreen()" >Save</button>
 		</div>
 	</div>
 <br>
@@ -107,20 +107,20 @@ table, td{    border: 1px solid #dddddd;
 	<div id="file-content"></div>
 	<img style="margin-left:25px" id="photo" src="http://www.internsystems-beta.com/test1/avatar.jpg" width="200" height="200" />
 	<input type="file" name="image" id="photo_filename" accept="image/x-png,image/gif,image/jpeg">
-	<button onclick="displayImage()">Display Image</button>
+	<button onclick="displayImage()" style="height: 50px;width: 150px">Display Image</button>
 <fieldset>
 <h2><color>Personal Information</color></h2>
 
 <label for="First Name">First Name</label>
-<input class="formdata" type="text" id="" name="first_name">
+<input class="formdata" type="text" id="" name="first_name" style="width: 500px;auto">
 </p>
 <p>
 <label for="Last Name"> Last Name</label>
-<input class="formdata" type="text" name="last_name">
+<input class="formdata" type="text" name="last_name" style="width: 500px;auto">
 </p>
 <p>
 <label for="Middle Name"> Middle Name</label>
-<input class="formdata" type="text" name="middle_name" >
+<input class="formdata" type="text" name="middle_name" style="width: 500px;auto" >
 </p>
 <p>
 
@@ -130,24 +130,24 @@ table, td{    border: 1px solid #dddddd;
 </p>
 <p>
 <label for="City">City</label>
-<input class="formdata" type="text" name="city" style="Width: 200px;auto">
+<input class="formdata" type="text" name="city" style="Width: 500px;auto">
 </p>
 <p>
 <label for="State">State</label>
-<input class="formdata" type="text" name="state" >
+<input class="formdata" type="text" name="state" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Zip Code">Zip Code</label>
-<input class="formdata" type="text" name="zip_code" >
+<input class="formdata" type="text" name="zip_code" style="width: 500px;auto" >
 
 </p>
 <p>
 <label for="Date of Bitrh">Date of Birth</label>
-<input class="formdata" type="Date" name="DOB" >
+<input class="formdata" type="Date" name="DOB" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Phone Number">Phone Number</label>
-<input class="formdata" type="text" name="phone_number" >
+<input class="formdata" type="text" name="phone_number" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Gender">Gender</label>
@@ -163,7 +163,7 @@ table, td{    border: 1px solid #dddddd;
 </p>
 <p>
 <label for="Email Address">Email Address</label>
-<input type="Email" name="email"  style="width: 300px;auto;background-color: LightGrey;" readonly>
+<input type="Email" name="email"  style="width: 500px;auto;background-color: LightGrey;" readonly>
 </p>
 
 </fieldset>
@@ -178,46 +178,46 @@ table, td{    border: 1px solid #dddddd;
 </p>
 <p>
 <label for="School ID">School ID</label>
-<input class="formdata" type="text" name="school_id" style="width: 125px;auto">
+<input class="formdata" type="text" name="school_id" style="width: 500px;auto">
 </p>
 
 <p>
 <label for="Major">Major</label>
-<input class="formdata" type="text" name="major" >
+<input class="formdata" type="text" name="major" style="width: 500px;auto" >
 </p>
 <p>
 <label for="GPA">GPA</label>
-<input class="formdata" type="text" name="gpa" >
+<input class="formdata" type="text" name="gpa" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Graduation Date">Graduation Date</label>
-<input class="formdata" type="Date" name="grad_date" >
+<input class="formdata" type="Date" name="grad_date" style="width: 500px;auto" >
 </p>
 </fieldset>
 <fieldset>
 
 
 <h2><color>Work Experience</color></h2>
-<button onclick="JobAddFunction()">Add Job</button>
-<button onclick="jobDeleteFunction()" id="del">Delete Job</button>
-<button type="button">Click me</button>
+<button onclick="JobAddFunction()" style="height: 50px;width: 100px">Add Job</button>
+<button onclick="jobDeleteFunction()" style="height: 50px;width: 100px" id="del">Delete Job</button>
+
 
 
 <p>
 <label for="Job Title">Job Title</label>
-<input class="formdata" type="text" name="job_title" >
+<input class="formdata" type="text" name="job_title" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Job Description">Job Description</label>
-<input class="formdata" type="text" name="job_description" >
+<input class="formdata" type="text" name="job_description" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Start Date">Start Date</label>
-<input class="formdata" type="Date" name="start_date" >
+<input class="formdata" type="Date" name="start_date" style="width: 500px;auto" >
 </p>
 <p>
 <label for="End Date">End Date</label>
-<input class="formdata" type="Date" name="end_date" >
+<input class="formdata" type="Date" name="end_date" style="width: 500px;auto" >
 </p>
 
 <!--<table id="myJobTable">
@@ -363,20 +363,20 @@ function jobDeleteFunction() {
 
 
 
-<button onclick="skilladdFunction()">Add Skill</button>
-<button onclick="skllDeleteFunction()">Delete Skill</button>
+<button onclick="skilladdFunction()" style="height: 50px;width: 100px;">Add Skill</button>
+<button onclick="skllDeleteFunction()" style="height: 50px;width: 100px">Delete Skill</button>
 
 <p>
 <label for="Skill">Skill</label>
-<input class="formdata" type="text" name="skill" >
+<input class="formdata" type="text" name="skill" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Skill Evaluation (0-10)">Job Title</label>
-<input class="formdata" type="text" name="skill_evaluation" >
+<input class="formdata" type="text" name="skill_evaluation" style="width: 500px;auto" >
 </p>
 <p>
 <label for="Skill Description(Optional)">Skill Description(Optional)</label>
-<input class="formdata" type="text" name="skill_description" >
+<input class="formdata" type="text" name="skill_description" style="width: 500px;auto" >
 </p>
 <!--<table id="mySkillTable">
   <tr>

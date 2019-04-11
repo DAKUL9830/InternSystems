@@ -133,14 +133,15 @@ html, body {
        background-color: #f1f1f1;
        overflow-x: hidden;
        padding-top: 20px;*/
-	 
+	
+    clip-path: polygon(56% 0, 100% 0, 100% 20%, 60% 20%, 60% 100%, 0 100%, 0 0);
 	position: fixed;
-    right: -18.5em;
+    right: 45.5em;
     top: 50%;
     width: 18em;
     margin: -35em 0 0 0;
     z-index: 5;
-    background: lightgray;
+    background: #db11494d;
     color: white;
     font-weight: bold;
     font-size: large;
@@ -149,7 +150,7 @@ html, body {
     border-left: none;
     padding: 0.5em 0.5em 0.5em 5em;
     box-shadow: 0 1px 3px black;
-    border-radius: 3em 3em 3em 3em;
+    border-radius: 3em 3em 3em 3em 3em 3em 3em;
    transition: 0.2s;
   
    
