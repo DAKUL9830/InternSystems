@@ -82,16 +82,7 @@ html, body {
 	
 	
    }
-.button {
-  background-color: grey; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-}
+
 
     .Frame {
        width: 80px;
@@ -134,7 +125,7 @@ html, body {
        overflow-x: hidden;
        padding-top: 20px;*/
 	
-    clip-path: polygon(56% 0, 100% 0, 100% 20%, 60% 20%, 60% 100%, 0 100%, 0 0);
+    /*clip-path: polygon(56% 0, 100% 0, 100% 20%, 60% 20%, 60% 100%, 0 100%, 0 0);*/
 	position: fixed;
     right: 45.5em;
     top: 50%;
@@ -150,7 +141,7 @@ html, body {
     border-left: none;
     padding: 0.5em 0.5em 0.5em 5em;
     box-shadow: 0 1px 3px black;
-    border-radius: 3em 3em 3em 3em 3em 3em 3em;
+    border-radius: 3em 3em 3em 3em ;
    transition: 0.2s;
   
    
